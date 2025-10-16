@@ -1,0 +1,60 @@
+#Temperature conversion
+#c/100 = f-32/180 = k-273/100
+
+
+print("1: convert degree into fahrenheit")
+print("2: convert fahrenheit into degree")
+print("3: convert degree into kelvin")
+print("4: convert fahrenheit into kelvin")
+print("5: convert kelvin into degree")
+print("6: convert kelvin into fahrenheit")
+
+def degree_to_fahrenheit():
+    c = int(input("Enter Temperature : "))
+    f = c * 1.8 + 32
+    print(f"Fahrenheit = {f}°F")
+
+def fahrenheit_to_degree():
+    f = int(input("Enter Temperature : "))
+    c = (f - 32) * 5/9
+    print(f"Degree = {c}°C")
+
+def degree_to_kelvin():
+    c = int(input("Enter temperature : "))
+    k = c + 273
+    print(f"Kelvin = {k}K")
+
+def fahrenheit_to_kelvin():
+    f = int(input("Enter Temperature : "))
+    k = (f - 32) * 1.8 + 273
+    print(f"Kelvin = {k}K")
+
+def kelvin_to_degree():
+    k = int(input("Enter Temperature : "))
+    c = k - 273
+    print(f"Degree = {c}°C")
+
+def kelvin_to_fahrenheit():
+    k = int(input("Enter Temperature : "))
+    f =(k - 273) * 5/9 + 32
+    print(f"Fahrenheit = {f}°F")
+    
+run = True
+while run:
+    n = int(input("enter your choice : "))
+    if n == 1:
+        degree_to_fahrenheit()
+    elif n == 2:
+        fahrenheit_to_degree()
+    elif n == 3:
+        degree_to_kelvin()
+    elif n == 4:
+        fahrenheit_to_kelvin()
+    elif n == 5:
+        kelvin_to_degree()
+    elif n == 6:
+        kelvin_to_fahrenheit()
+    else :
+        run = False
+
+
